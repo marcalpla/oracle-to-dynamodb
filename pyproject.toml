@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "oracle-to-dynamodb"
+version = "0.1.0"
+description = ""
+authors = ["Marçal Pla <marcal@taleia.software>"]
+license = "MIT License"
+readme = "README.md"
+exclude = ["presets"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+boto3 = "^1.35.73"
+click = "^8.1.7"
+oracledb = "^2.5.0"
+
+[tool.poetry.scripts]
+oracle-to-dynamodb = "oracle_to_dynamodb:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
