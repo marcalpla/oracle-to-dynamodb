@@ -6,5 +6,5 @@ poetry run oracle-to-dynamodb \
     --oracle-user "user" \
     --oracle-password "password" \
     --select-query "SELECT col1, col2 FROM table" \
-    --dynamodb-table "MyDynamoDBTable" \
+    --dynamodb-table-name "MyDynamoDBTable" \
     --dynamodb-attributes '["Attribute1", "Attribute2"]'    
