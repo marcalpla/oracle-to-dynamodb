@@ -103,7 +103,10 @@ def main(
     else:
         with table.batch_writer() as batch:
             for row in cursor:
-                item = {dynamodb_attributes_list[i]: value
+                item = {dynamodb_attributes_list[i]: (
+                            True if str(value).lower() == 'true' else 
+                            False if str(value).lower() == 'false' else
+                            value)
                         for i, value in enumerate(row)}
                 batch.put_item(Item=item)
                 rows_processed += 1
